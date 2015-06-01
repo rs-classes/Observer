@@ -1,0 +1,3 @@
+[submodule "Logger"]
+	path = Logger
+	url = ../RSLogger.git
