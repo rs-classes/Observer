@@ -1,0 +1,11 @@
+*.command.1.tlog
+*.tlog
+*.exe
+*.ilk
+*.log
+*.pdb
+*.vcxprojResolveAssemblyReference.cache
+*.obj
+*.idb
+*.lastbuildstate
+*.exe.intermediate.manifest

@@ -1,6 +1,11 @@
 #include "include\SimpleRelay.h"
 
 SimpleRelay& SimpleRelay::getInstance(){
+  // The only instance
+  // Guaranteed to be lazy initialized
+  // Guaranteed that it will be destroyed correctly
+  static SimpleRelay instance;
+  return instance;
 }
 
 void SimpleRelay::notify(const ObserverHeader& header, const void* data){

@@ -1,6 +1,9 @@
 #ifndef SIMPLE_RELAY_H_
 #define SIMPLE_RELAY_H_
-#include "Observer.h"
+
+#include <vector>
+#include "Relay.h"
+#include "ChannelData.h"
 
 class SimpleRelay: public Relay{
  public:
@@ -13,7 +16,7 @@ class SimpleRelay: public Relay{
    *  @param header the basic header
    *  @param data the data that has to be sended
    */
-  virtual void notify(const ObserverHeader& header, const void* data);
+  void notify(const ObserverHeader& header, const void* data);
   
   /**
    *  Register a new subject at the rely
@@ -21,7 +24,7 @@ class SimpleRelay: public Relay{
    *  @param subject the subject
    *  @param channel the channel on witch the subject wants to send
    */
-  virtual void registerSubject(Subject& subject, const char* channel);
+  void registerSubject(Subject& subject, const char* channel);
   
   /**
    *  Register a new observer at the relay
@@ -33,8 +36,11 @@ class SimpleRelay: public Relay{
 
 private:
   SimpleRelay();
+
+  std::vector<ChannelData> channelData;
+
   // Stop the compiler generating methods of copy the object
-  RSLogger(RSLogger const& copy);            // Not Implemented
-  RSLogger& operator=(RSLogger const& copy); // Not Implemented
+  SimpleRelay(SimpleRelay const& copy);            // Not Implemented
+  SimpleRelay& operator=(SimpleRelay const& copy); // Not Implemented
 };
 #endif

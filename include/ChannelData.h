@@ -10,22 +10,16 @@ Description	:	The file contains the interfaces of all classes that have somthing
 Dependencies:	RSLogger
 Changes		:
 \**************************************************************************************/
-#ifndef OBSERVER_DATA_H_
-#define OBSERVER_DATA_H_
+#ifndef CHANNEL_DATA_H_
+#define CHANNEL_DATA_H_
+
+#include "Subject.h"
 #include "Observer.h"
 #include <vector>
 
 class ChannelData{
 	char channelName[254];
-	 std::vector<Observer> observers;
-	 std::vector<Subject> subjects;
-};
-class ObserverHeader{
- public:
-  char channelName[254];
-  char sender[254];
-  time_t created; //time(0);
-  unsigned int dataSize;
-  char dataType[20];
+	 std::vector<Observer*> observers;
+	 std::vector<Subject*> subjects;
 };
 #endif

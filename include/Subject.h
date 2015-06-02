@@ -10,25 +10,24 @@ Description	:	The file contains the interfaces of all classes that have somthing
 Dependencies:	RSLogger
 Changes		:
 \**************************************************************************************/
-#ifndef OBSERVER_H_
-#define OBSERVER_H_
+#ifndef SUBJECT_H_
+#define SUBJECT_H_
 
 #include "ObserverHeader.h"
-
 /**
- *  The observer recives the messages from the subject
+ *  This class creates the messages
  */
-class Observer{
- public:
+class Subject{
+ protected:
   /**
-   *  Recives the notifications from the subjet
-   *
-   *  @param header The header with the basic info
-   *  @param data the real data
+   *  Send the message to the observers
+   *  @param header the basic header
+   *  @param data the data that has to be sended
    */
-  virtual void onNotify(const ObserverHeader* header, const void* data) = 0;
-
-  virtual ~Observer(){}
+  virtual void notify(const ObserverHeader& header, const void* data) = 0;
+  
+  virtual ~Subject(){}
+ 
 };
 
 #endif
