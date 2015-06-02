@@ -1,4 +1,4 @@
-/**************************************************************************************	\
+/******************************************************************************\
                                         Observer.h
 Author		:	ing.	R.J.H.M.	Stevens
 Begin		:	02-06-2015
@@ -7,9 +7,9 @@ Version		:	1.0.0
 TODO		:	
 Description	:	The file contains the interfaces of all classes that have somthing to do
                      with the observer
-Dependencies:	RSLogger
+Dependencies    :	RSLogger
 Changes		:
-\**************************************************************************************/
+\******************************************************************************/
 #ifndef OBSERVER_H_
 #define OBSERVER_H_
 
@@ -27,7 +27,7 @@ class Observer{
    *  @param data the real data
    */
   virtual void onNotify(const ObserverHeader* header, const void* data) = 0;
-
+  
   virtual ~Observer(){}
 };
 

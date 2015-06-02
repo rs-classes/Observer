@@ -1,3 +1,15 @@
+/***************************************************************************** \
+                                        Observer.h
+Author		:	ing.	R.J.H.M.	Stevens
+Begin		:	02-06-2015
+			
+Version		:	1.0.0
+TODO		:	
+Description	:	The file contains the interfaces of all classes that have somthing to do
+                     with the observer
+Dependencies    :	RSLogger
+Changes		:
+\******************************************************************************/
 #ifndef SIMPLE_RELAY_H_
 #define SIMPLE_RELAY_H_
 
@@ -33,12 +45,12 @@ class SimpleRelay: public Relay{
    *  @param channel the channel on witch the subject wants to send
    */
   virtual void registerObserver(Observer& observer, const char* channel);
-
-private:
+  
+ private:
   SimpleRelay();
-
+  
   std::vector<ChannelData> channelData;
-
+  
   // Stop the compiler generating methods of copy the object
   SimpleRelay(SimpleRelay const& copy);            // Not Implemented
   SimpleRelay& operator=(SimpleRelay const& copy); // Not Implemented

@@ -1,4 +1,4 @@
-/**************************************************************************************	\
+/******************************************************************************\
                                         Observer.h
 Author		:	ing.	R.J.H.M.	Stevens
 Begin		:	02-06-2015
@@ -7,9 +7,9 @@ Version		:	1.0.0
 TODO		:	
 Description	:	The file contains the interfaces of all classes that have somthing to do
                      with the observer
-Dependencies:	RSLogger
+Dependencies    :
 Changes		:
-\**************************************************************************************/
+\******************************************************************************/
 #ifndef RELAY_H_
 #define RELAY_H_
 
@@ -43,7 +43,7 @@ class Relay{
    *  @param channel the channel on witch the subject wants to send
    */
   virtual void registerObserver(Observer& observer, const char* channel) = 0;
-
+  
   virtual ~Relay(){}
 };
 

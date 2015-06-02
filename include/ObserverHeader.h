@@ -1,4 +1,4 @@
-/**************************************************************************************	\
+/******************************************************************************\
                                         ObserverHeader.h
 Author		:	ing.	R.J.H.M.	Stevens
 Begin		:	02-06-2015
@@ -7,9 +7,9 @@ Version		:	1.0.0
 TODO		:	
 Description	:	The file contains the interfaces of all classes that have somthing to do
                      with the observer
-Dependencies:	
+Dependencies    :	
 Changes		:
-\**************************************************************************************/
+\******************************************************************************/
 #ifndef OBSERVER_HEADER_H_
 #define OBSERVER_HEADER_H_
 #include <ctime>

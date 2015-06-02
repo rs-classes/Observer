@@ -1,4 +1,4 @@
-/**************************************************************************************	\
+/******************************************************************************\
                                         Observer.h
 Author		:	ing.	R.J.H.M.	Stevens
 Begin		:	02-06-2015
@@ -9,7 +9,7 @@ Description	:	The file contains the interfaces of all classes that have somthing
                      with the observer
 Dependencies:	RSLogger
 Changes		:
-\**************************************************************************************/
+\******************************************************************************/
 #ifndef SUBJECT_H_
 #define SUBJECT_H_
 
