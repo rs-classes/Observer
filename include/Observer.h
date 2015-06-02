@@ -59,7 +59,13 @@ class Subject{
  *  This class sits between the subject and the observer, so there is no direct link between the observer and the subject
  */
 class Relay{
- public: 
+ public:
+  /**
+   *  Send the message to the observers
+   *  @param header the basic header
+   *  @param data the data that has to be sended
+   */
+  virtual void notify(const ObserverHeader& header, const void* data) = 0;
   /**
    *  Register a new subject at the rely
    *
