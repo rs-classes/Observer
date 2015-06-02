@@ -14,15 +14,7 @@ Changes		:
 #define OBSERVER_H_
 #include <ctime>
 
-
-class ObserverHeader{
- public:
-  char channelName[254];
-  char sender[254];
-  time_t created; //time(0);
-  unsigned int dataSize;
-  char dataType[20];
-};
+#include "ObserverData.h"
 
 /**
  *  The observer recives the messages from the subject
