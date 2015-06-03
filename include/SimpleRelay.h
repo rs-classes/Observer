@@ -49,7 +49,7 @@ class SimpleRelay: public Relay{
  private:
   SimpleRelay();
   
-  std::vector<ChannelData> channelData;
+  std::vector<ChannelData> mv_channelData;
   
   // Stop the compiler generating methods of copy the object
   SimpleRelay(SimpleRelay const& copy);            // Not Implemented

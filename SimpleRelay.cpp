@@ -13,37 +13,37 @@ void SimpleRelay::notify(const ObserverHeader& header, const void* data)
 {
 }
 
-void SimpleRelay::registerSubject(Subject& subject, const char* channel)
+void SimpleRelay::registerSubject(Subject& subject, const char* channelName)
 {
-  for(int i = 0; i < channelData.size(); i++)
+  for(int i = 0; i < mv_channelData.size(); i++)
     {
-      if(channelData.at(i).channelName == *channel)
+      if(strcmp(mv_channelData.at(i).channelName,channelName))
 	{
-	  channelData.at(i).subjects.add(subject);
+	  mv_channelData.at(i).subjects.push_back(&subject);
 	  return;
 	}
     }
   
   ChannelData channel;
-  channel.channelName = *channel;
-  channel.subjects.add(subject);
-  channelData.add(channel);
+  strncpy ( (char*)channelName, channel.channelName, sizeof(channelName) );
+  channel.subjects.push_back(&subject);
+  mv_channelData.push_back(channel);
 }
 
-void SimpleRelay::registerObserver(Observer& observer, const char* channel){
-  for(int i = 0; i < channelData.size(); i++)
+void SimpleRelay::registerObserver(Observer& observer, const char* channelName){
+  for(int i = 0; i < mv_channelData.size(); i++)
     {
-      if(channelData.at(i).channelName == *channel)
+    if(strcmp(mv_channelData.at(i).channelName,channelName) == 0)
 	{
-	  channelData.at(i).observer.add(observer);
+	  mv_channelData.at(i).observers.push_back(&observer);
 	  return;
 	}
     }
   
   ChannelData channel;
-  channel.channelName = *channel;
-  channel.observer.add(observer);
-  channelData.add(channel);
+  strncpy ( (char*)channelName, channel.channelName, sizeof(channelName) );
+  channel.observers.push_back(&observer);
+  mv_channelData.push_back(channel);
 }
 
 SimpleRelay::SimpleRelay(){

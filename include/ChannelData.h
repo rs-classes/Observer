@@ -18,6 +18,7 @@ Changes		:
 #include <vector>
 
 class ChannelData{
+ public:
   char channelName[254];
   std::vector<Observer*> observers;
   std::vector<Subject*> subjects;

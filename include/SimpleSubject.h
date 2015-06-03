@@ -10,8 +10,8 @@ Description	:	The file contains the interfaces of all classes that have somthing
 Dependencies    :	RSLogger
 Changes		:
 \******************************************************************************/
-#ifndef SIMPLE_SUBJECT
-#define SIMPLE_RELAY_H_
+#ifndef SIMPLE_SUBJECT_H_
+#define SIMPLE_SUBJECT_H_
 #include "Subject.h"
 
 class SimpleSubject: public Subject{
