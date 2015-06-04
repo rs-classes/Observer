@@ -17,7 +17,7 @@ Changes		:
 
 class SimpleSubject: public Subject{
  public:
-  SimpleSubject();
+  SimpleSubject(const char* name, const char* channelName);
   virtual void notify(const ObserverHeader& header, const void* data);
  private:
   char m_channelName[254];

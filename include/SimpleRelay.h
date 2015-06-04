@@ -20,7 +20,7 @@ Changes		:
 class SimpleRelay: public Relay{
  public:
 
-  static SimpleRelay& getInstance();
+  static SimpleRelay* getInstance();
   //http://stackoverflow.com/questions/86582/singleton-how-should-it-be-used
   
   /**

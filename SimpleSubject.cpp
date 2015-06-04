@@ -1,4 +1,4 @@
-#include "SimpleSubject.h"
+#include "include\SimpleSubject.h"
 #include "include\SimpleRelay.h"
 
 SimpleSubject::SimpleSubject(const char* name, const char* channelName){
@@ -7,10 +7,10 @@ SimpleSubject::SimpleSubject(const char* name, const char* channelName){
 
   mp_relay = SimpleRelay.getInstance();
 
-  mp_relay.registerSubject(this, channelName);
+  mp_relay->registerSubject(*this, channelName);
   
 }
 
-virtual void SimpleSubject::notify(const ObserverHeader& header, const void* data){
-  mp_relay.notify(header, data);
+void SimpleSubject::notify(const ObserverHeader& header, const void* data){
+  mp_relay->notify(header, data);
 }
