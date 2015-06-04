@@ -9,3 +9,4 @@
 *.idb
 *.lastbuildstate
 *.exe.intermediate.manifest
+*.unsuccessfulbuild
