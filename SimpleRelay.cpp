@@ -33,7 +33,7 @@ void SimpleRelay::registerSubject(Subject& subject, const char* channelName)
 void SimpleRelay::registerObserver(Observer& observer, const char* channelName){
   for(int i = 0; i < mv_channelData.size(); i++)
     {
-    if(strcmp(mv_channelData.at(i).channelName,channelName) == 0)
+      if(strcmp(mv_channelData.at(i).channelName,channelName) == 0)
 	{
 	  mv_channelData.at(i).observers.push_back(&observer);
 	  return;
